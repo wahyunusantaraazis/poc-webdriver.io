@@ -1,0 +1,45 @@
+[
+    {
+        "description": "Periksa field username",
+        "field": "inputUsername"
+    },
+    {
+        "description": "Periksa field password",
+        "field": "inputPassword"
+    },
+    {
+        "description": "Periksa button login",
+        "field": "btnSubmit"
+    },
+    {
+        "description": "Periksa linkbutton lupa password",
+        "field": "lupaPassword"
+    },
+    {
+        "description": "Login dengan username dan password valid",
+        "username": "wahyunusantaraazis",
+        "password": "Admin123!",
+        "check": "checkWelcomeMessage"
+    },
+    {
+        "description": "Login dengan username valid dan password invalid",
+        "username": "wahyunusantaraazis",
+        "password": "invalidpass",
+        "alert": "popAlertInvalidPass",
+        "alertText": "Login Gagal. Username atau password salah"
+    },
+    {
+        "description": "Login dengan username invalid dan password valid",
+        "username": "wahyunusantaraazis98",
+        "password": "Admin123!",
+        "alert": "popAlertInvalidPass",
+        "alertText": "Login Gagal. Username atau password salah"
+    },
+    {
+        "description": "Login dengan username dan password invalid",
+        "username": "wahyunusantaraazis98",
+        "password": "invalidpass",
+        "alert": "popAlertInvalidPass",
+        "alertText": "Login Gagal. Username atau password salah"
+    }
+]

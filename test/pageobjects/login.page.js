@@ -9,15 +9,27 @@ class LoginPage extends Page {
      * define selectors using getter methods
      */
     get inputUsername () {
-        return $("//input[@id='username']");
+        return $('#username');
     }
 
     get inputPassword () {
-        return $("//input[@id='password']");
+        return $('#password');
     }
 
     get btnSubmit () {
         return $("//button[normalize-space()='LOGIN']");
+    }
+
+    get welcomeMessage() {
+        return $('//h3[normalize-space()="Hi, Wahyu"]');
+    }
+
+    get popAlertInvalidPass(){
+        return $("//div[@class='alert-text']");
+    }
+
+    get lupaPassword(){
+        return $("//a[normalize-space()='Lupa Password ?']");
     }
 
     /**
@@ -28,6 +40,10 @@ class LoginPage extends Page {
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
         await this.btnSubmit.click();
+    }
+
+    async checkWelcomeMessage() {
+        await expect(this.welcomeMessage).toHaveText('Hi, Wahyu')
     }
 
     /**

@@ -28,6 +28,10 @@ class LupaPassword extends Page {
         return $("//label[@id='email-error']");
     }
 
+    get titleLogin(){
+        return $("//h3[normalize-space()='LOGIN']");
+    }
+
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password

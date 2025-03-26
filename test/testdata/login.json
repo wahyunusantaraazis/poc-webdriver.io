@@ -19,7 +19,7 @@
         "description": "Login dengan username dan password valid",
         "username": "wahyunusantaraazis",
         "password": "Admin123!",
-        "check": "checkWelcomeMessage"
+        "check": "welcomeMessage"
     },
     {
         "description": "Login dengan username valid dan password invalid",
@@ -41,5 +41,28 @@
         "password": "invalidpass",
         "alert": "popAlertInvalidPass",
         "alertText": "Login Gagal. Username atau password salah"
+    },
+    {
+        "description": "Login dengan username kosong",
+        "username": "",
+        "password": "Admin123!",
+        "alert": "popAlertInvalidPass",
+        "alertText": "Username tidak boleh kosong"
+    },
+    {
+        "description": "Login dengan password kosong",
+        "username": "wahyunusantaraazis",
+        "password": "",
+        "alert": "popAlertInvalidPass",
+        "alertText": "Password tidak boleh kosong"
+    },
+    {
+        "description": "Login dengan username dan password kosong",
+        "username": "",
+        "password": "",
+        "alertUsername": "popAlertEmptyUsername",
+        "alertTextUsername": "Username tidak boleh kosong",
+        "alertPass": "popAlertEmptyPass",
+        "alertTextPass": "Password tidak boleh kosong"
     }
 ]

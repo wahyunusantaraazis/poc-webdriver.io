@@ -30,6 +30,11 @@ describe('Feature Lupa Password', () => {
         await expect(LupaPassword.btnLogin).toBeEnabled()
     })
 
+    it('User request lupa password', async () => {
+        await LupaPassword.open()
+        await LupaPassword.lupapassword('wahyu.azis@kpvendor.id')
+    })
+
     it('User request lupa password dengan masukan email tidak sesuai format', async () => {
         await LupaPassword.open()
         await LupaPassword.lupapassword('wahyunusantaragmail.com')
@@ -53,4 +58,11 @@ describe('Feature Lupa Password', () => {
         const inputValue = await LupaPassword.inputEmail.getValue()
         expect(inputValue.length).toBeLessThanOrEqual(50)
     });
+
+    it('User request lupa password', async () => {
+        await LupaPassword.open()
+        await LupaPassword.linkbuttonLupaPassword.click()
+        await LupaPassword.btnLogin.click()
+        await expect (LupaPassword.titleLogin).toBeExisting()
+    })
 })

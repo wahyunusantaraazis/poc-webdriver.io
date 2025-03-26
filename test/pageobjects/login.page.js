@@ -21,11 +21,19 @@ class LoginPage extends Page {
     }
 
     get welcomeMessage() {
-        return $('//h3[normalize-space()="Hi, Wahyu"]');
+        return $("//div[contains(@class,'kt-header__topbar-wrapper')]//img[contains(@alt,'Pic')]");
     }
 
     get popAlertInvalidPass(){
         return $("//div[@class='alert-text']");
+    }
+
+    get popAlertEmptyUsername(){
+        return $("//div[normalize-space()='Username tidak boleh kosong']");
+    }
+
+    get popAlertEmptyPass(){
+        return $("//div[normalize-space()='Password tidak boleh kosong']");
     }
 
     get lupaPassword(){
@@ -40,10 +48,6 @@ class LoginPage extends Page {
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
         await this.btnSubmit.click();
-    }
-
-    async checkWelcomeMessage() {
-        await expect(this.welcomeMessage).toHaveText('Hi, Wahyu')
     }
 
     /**

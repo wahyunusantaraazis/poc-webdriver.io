@@ -2,7 +2,7 @@ const { expect } = require('@wdio/globals')
 const LoginPage = require('../pageobjects/login.page')
 const EditPassword = require('../pageobjects/edit.password')
 
-describe('Fitur Edit Profil', () => {
+describe('Fitur Edit Password', () => {
     const usernameValid = 'wahyunusantaraazis'
     const passwordValid = 'Admin123!'
     const usernameInvalid = 'dummywahyu'

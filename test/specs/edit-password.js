@@ -33,14 +33,14 @@ describe('Fitur Edit Password', () => {
         await expect(EditPassword.fieldPassword).toBeEnabled()
     })
 
-    it('Periksa field email', async () => {
+    it('Periksa field password baru', async () => {
         await login(usernameValid, passwordValid)
         await expect(EditPassword.txtNewPassword).toHaveText(expect.stringContaining('Password Baru'))
         await expect(EditPassword.fieldNewPassword).toBeExisting()
         await expect(EditPassword.fieldNewPassword).toBeEnabled()
     })
 
-    it('Periksa field nama depan', async () => {
+    it('Periksa field konfirmasi password', async () => {
         await login(usernameValid, passwordValid)
         await expect(EditPassword.txtConfirmPassword).toHaveText(expect.stringContaining('Konfirmasi Password'))
         await expect(EditPassword.fieldConfirmPassword).toBeExisting()

@@ -83,7 +83,6 @@ class MasterKuler extends Page {
     get btnMengerti(){
         return $("//button[normalize-space()='Mengerti']")
     }
-
     
     get titleMODetail () {
         return $("//a[contains(@href,'master-kunjungan-dealer/BM/detail')]");

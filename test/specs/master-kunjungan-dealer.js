@@ -64,6 +64,7 @@ describe('Fitur Master Kunjungan Dealer', () => {
         await MasterKuler.btnEditMO.click()
         await MasterKuler.inputpenalti('23', '15', '10')
         await MasterKuler.inputAllBranchMO.setValue("56")
+        //await MasterKuler.chcAllCabangMO.click()
         await MasterKuler.btnSimpan.click()
         await MasterKuler.btnKonfirmasiSimpan.click()
         await expect (MasterKuler.SimpanBerhasil).toBeExisting()
